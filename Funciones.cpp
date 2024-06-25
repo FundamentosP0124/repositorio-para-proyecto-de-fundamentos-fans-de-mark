@@ -5,13 +5,13 @@
 #include <ctime>   //Nos ayuda para obtener el tiempo actual
 
 using namespace std; 
-
-struct Participant {
+//Declaración de la función
+struct Participant { 
     string Name;
     int SCORE;
 };
 
-bool Tableroempate(char Tablero[][3]){
+bool Tableroempate(char Tablero[][3]){   //Es para verificar si hay un empate sea de jugador vs jugador o Vsmaquina
 
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
@@ -24,7 +24,7 @@ bool Tableroempate(char Tablero[][3]){
     }
     return true;
 }
-
+// Imprime las lineas horizontales del tablero del juego
 void ImpriTablero(char Tablero[][3]) {
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
@@ -34,3 +34,24 @@ void ImpriTablero(char Tablero[][3]) {
         cout << "-------------\n";
     }
 }
+
+// Verifica el ganador en diferentes posiciones del tablero sea diagonal, horizontal o vertical
+
+bool VerifiGANADOR(char Tablero[][3], char Jugador) {
+    for (int i = 0; i < 3; ++i) {
+        if (Tablero[i][0] == Jugador && Tablero[i][1] == Jugador && Tablero[i][2] == Jugador)
+            return true;
+        if (Tablero[0][i] == Jugador && Tablero[1][i] == Jugador && Tablero[2][i] == Jugador)
+            return true;
+    }
+    if (Tablero[0][0] == Jugador && Tablero[1][1] == Jugador && Tablero[2][2] == Jugador)
+        return true;
+    if (Tablero[0][2] == Jugador && Tablero[1][1] == Jugador && Tablero[2][0] == Jugador)
+        return true;
+    
+    return false;
+}
+
+
+
+

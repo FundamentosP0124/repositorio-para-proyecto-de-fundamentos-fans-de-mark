@@ -21,9 +21,7 @@ int main() {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
-    } while (opcion != 7);
-
-     switch (opcion)      // switch que evalua la opcion ingresada por el usuario
+        switch (opcion)      // switch que evalua la opcion ingresada por el usuario
         {
         case 1:
             cout << "Ingrese el nombre del primer participante: ";
@@ -35,6 +33,8 @@ int main() {
             cout << "El participante " << Usuario_2 << " A sido inscrito.\n";
             break;
         }
+
+    } while (opcion != 7);
     
     return 0;
 }

@@ -9,15 +9,14 @@ int main() {
 
     do                  // opciones del menu
     {   
-        cout << "\n                    |||JUEGO X ^ O|||\n";
-        cout << "\n      <=||=||=> OPCIONES DEL JUEGO <=||=||=>\n\n";
-        cout << "1. Inscribir Participante\n";
-        cout << "2. Listas de Puntuaciones de 'jugadores'\n";
-        cout << "3. Jugar\n";
-        cout << "4. Mostrar Ganador o Empate\n";
-        cout << "5. Ayuda\n";
-        cout << "6. Integrantes del Proyecto\n";
-        cout << "7. Salir\n";
+        cout << "\n                    <====JUEGO X ^ O====>\n";
+        cout << "\n       ====OPCIONES DEL JUEGO====\n\n";
+        cout << "1. Listas de Puntuaciones de 'jugadores' en archivo.txt\n";
+        cout << "2. Jugar\n";
+        cout << "3. Mostrar Ganador o Empate y guardar en .txt\n";
+        cout << "4. Ayuda\n";
+        cout << "5. Integrantes del Proyecto\n";
+        cout << "6. Salir\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 

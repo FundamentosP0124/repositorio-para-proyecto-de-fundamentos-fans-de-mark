@@ -25,7 +25,8 @@ bool Tableroempate(char Tablero[][3]){   //Es para verificar si hay un empate se
     return true;
 }
 // Imprime las lineas horizontales del tablero del juego
-void ImpriTablero(char Tablero[][3]) {
+void ImpriTablero(char Tablero[][3]) 
+{   cout << "-------------\n";                      //Modificación del 'Tablero'
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
             cout << "| " << Tablero[i][j] << " ";

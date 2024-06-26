@@ -3,7 +3,7 @@
 #include <string>  //Para manejar cadenas de texto 
 #include <cstdlib> // Sirve para funciones generales de la maquina tales como rand() y srand() posiciones aleatorias
 #include <ctime>   //Nos ayuda para obtener el tiempo actual
-
+#include <fstream> //Nos sirive para manejar archivo.txt
 using namespace std; 
 //Declaración de la función
 struct Participant { 
@@ -51,7 +51,4 @@ bool VerifiGANADOR(char Tablero[][3], char Jugador) {
     
     return false;
 }
-
-
-
 

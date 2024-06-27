@@ -20,20 +20,17 @@ int main() {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
-        switch (opcion)      // switch que evalua la opcion ingresada por el usuario
+        switch (opcion)      
         {
-        case 1:
-            cout << "Ingrese el nombre del primer participante: ";
-            cin >> Usuario_1;
-            cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
-
-            cout << "Ingrese el nombre del segundo participante: ";
-            cin >> Usuario_2;
-            cout << "El participante " << Usuario_2 << " A sido inscrito.\n";
+        case 1:          // creacion del archivo txt
+        
+            cout << "\n=== Puntuaciones ===\n";
+            ofstream Puntuacionarchivo;
+            Puntuacionarchivo.open("Puntuaciones.txt", ios::out);
             break;
         }
 
-    } while (opcion != 7);
+        } while (opcion != 6);
     
     return 0;
 }

@@ -27,7 +27,14 @@ int main() {
             cout << "\n=== Puntuaciones ===\n";
             ofstream Puntuacionarchivo;
             Puntuacionarchivo.open("Puntuaciones.txt", ios::out);
+            if (Puntuacionarchivo.fail())      // verificando posible error de apertura
+            {
+
+                cout << "No se pudo abrir el archivo puntuacion. ";
+                exit(1);
+            }
             break;
+
         }
 
         } while (opcion != 6);

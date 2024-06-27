@@ -33,6 +33,16 @@ int main() {
                 cout << "No se pudo abrir el archivo puntuacion. ";
                 exit(1);
             }
+             for (const auto &p : Participantes)      // recorre cada participante del contenedor participantes
+            {
+                // para cada participante se imprime su nombre y puntuacion
+                cout << p.Name << " - Puntuacion: " << p.SCORE << "\n"; 
+
+                // se guarda en el archivo .txt     
+                Puntuacionarchivo << p.Name << " - Puntuacion: " << p.SCORE << "\n";   
+            }
+            Puntuacionarchivo.close();      // se cierra el archivo .txt
+
             break;
 
         }

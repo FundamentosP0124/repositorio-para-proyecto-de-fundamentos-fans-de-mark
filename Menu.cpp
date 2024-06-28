@@ -78,6 +78,14 @@ int main() {
             cin >> modJuego;
             bool VSmaquina = (modJuego == 2);
 
+            if (VSmaquina)   // Agregando opcion Vs maquina 
+            {
+                cout << "\nIngrese el nombre del participante: ";
+                cin >> Usuario_1;
+                cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
+                Usuario_2 = "Maquina";
+            }
+
             break;
         }
 

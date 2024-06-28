@@ -73,9 +73,10 @@ int main() {
 
         case 2:
         
-            int modJuego; //Opcion que pregunta modo de juego 
+            int modJuego;  
+                            //Opcion que pregunta modo de juego     
             cout << "Elige el modo que deseas jugar '(|1|) Jugador vs Jugador' |/| '(|2|). Jugador vs la maquina': ";
-            cin >> modJuego;
+            cin >> modJuego; 
             bool VSmaquina = (modJuego == 2);
 
             if (VSmaquina)   // Agregando opcion Vs maquina 
@@ -84,6 +85,17 @@ int main() {
                 cin >> Usuario_1;
                 cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
                 Usuario_2 = "Maquina";
+            }
+            else    //Opcion Jugador vs Jugador 
+            {
+                //Solicitando los nombres de los jugadores
+                cout << "\nIngrese el nombre del primer participante: ";
+                cin >> Usuario_1;
+                cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
+                cout << "\nIngrese el nombre del segundo participante: ";
+                cin >> Usuario_2;
+                cout << "El participante " << Usuario_1 << " A sido inscrito.\n"
+                     << "\n";
             }
 
             break;

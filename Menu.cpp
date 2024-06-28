@@ -144,6 +144,12 @@ int main()
                 //Guarda empate
                 resultarchivo << "La partida termino en empate." << "\n";
             }
+            else    //Guarda los ganadores
+            {
+                resultarchivo << "El ganador es: " << RESULT.first << "\n";
+                resultarchivo << "El segundo jugador es: " << RESULT.second << "\n";
+            }
+            resultarchivo.close();
         break;
         } 
 

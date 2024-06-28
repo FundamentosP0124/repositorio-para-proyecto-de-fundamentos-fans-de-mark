@@ -69,9 +69,9 @@ void MovimientoMaquina(char Tablero[][3])
 
 //Realiza la selección de ganador y perdedor 
 
-pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participant> &Participantes, bool VSmaquina)
+pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participant> &Participantes, bool VSmaquina)  
 {
-    char Tablero[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+    char Tablero[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};           //Pair contendra tanto como vector y bool
     char TURNO = 'X';
     string GANADOR = "";
     string PERDEDOR = "";

@@ -75,4 +75,14 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
     char TURNO = 'X';               //Declaramos 3 variables
     string GANADOR = "";   
     string PERDEDOR = "";
+
+
+    do
+    {
+        int Fila, Columna;               //Declaración de las variables que van impresión del tablero
+        ImpriTablero(Tablero);
+
+    }
 }
+
+

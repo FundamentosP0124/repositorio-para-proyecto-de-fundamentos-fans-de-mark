@@ -104,9 +104,9 @@ int main()
             JUEGOS.push_back(JUEGOdesc);
             char SEGUIR;
 
-            char SEGUIR;   
+            char SEGUIR;
             do
-            {   //Opcion seguir jugando
+            { // Opcion seguir jugando
                 cout << " Desea seguir jugando ====> Seguir jugando= (a) <=||=> Reiniciar el juego(b): ";
                 cin >> SEGUIR;
                 if (SEGUIR == 'n' || SEGUIR == 'N')
@@ -122,9 +122,7 @@ int main()
         }
         break;
         
-        }
-
-        }while (opcion != 6);
+    }while (opcion != 6);
 
     return 0;
 }

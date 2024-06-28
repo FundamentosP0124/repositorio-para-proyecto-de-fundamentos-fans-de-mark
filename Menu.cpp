@@ -55,7 +55,13 @@ int main() {
                 cout << "No se pudo abrir el archivo puntuacion. ";
                 exit(1);
             }
-            
+             for (const auto &p : Participantes)
+            {
+                cout << p.Name << " Vs " << p.Name << "\n";      // imprime el nombre de los jugadores
+                Partidas << p.Name << " Vs " << "maquina" << "\n";      
+            }
+            Partidas.close();
+
             break;
 
         }

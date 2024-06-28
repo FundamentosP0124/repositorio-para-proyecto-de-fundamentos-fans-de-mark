@@ -93,6 +93,15 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
 
             Fila--;
             Columna--;
+            
+            //Verifica si las posiciones en el tablero es diferente de un blanco
+
+            if (Tablero[Fila][Columna] != ' ')
+            {
+                cout << " |=|Posicion ocupada o Invalida.|=|\n";
+                continue;
+            }
+            Tablero[Fila][Columna] = TURNO;
         }
 
 

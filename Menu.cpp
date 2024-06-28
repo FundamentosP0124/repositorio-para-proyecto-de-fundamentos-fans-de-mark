@@ -43,6 +43,19 @@ int main() {
             }
             Puntuacionarchivo.close();      // se cierra el archivo .txt
 
+            // declara un objeto de tipo ofstream
+            ofstream Partidas;
+
+            // intenta abrir el archivo "partidas.txt"
+            Partidas.open("Partidas.txt", ios::out);
+
+            // comprueba si la apertura del archivo ha fallado
+            if (Partidas.fail())
+            {
+                cout << "No se pudo abrir el archivo puntuacion. ";
+                exit(1);
+            }
+            
             break;
 
         }

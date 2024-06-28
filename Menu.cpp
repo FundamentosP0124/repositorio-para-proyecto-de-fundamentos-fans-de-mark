@@ -1,14 +1,15 @@
 #include <Funciones.hpp>
 
-int main() {
-    int opcion;              // declaracion de variables de tipo entero y de tipo string
+int main()
+{
+    int opcion; // declaracion de variables de tipo entero y de tipo string
     string Usuario_1, Usuario_2;
     pair<string, string> RESULT;
     vector<Participant> Participantes;
     vector<string> JUEGOS;
 
-    do                  // opciones del menu
-    {   
+    do // opciones del menu
+    {
         cout << "\n                    <====JUEGO X ^ O====>\n";
         cout << "\n       ====OPCIONES DEL JUEGO====\n\n";
         cout << "1. Listas de Puntuaciones de 'jugadores' en archivo.txt\n";
@@ -20,28 +21,28 @@ int main() {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
-        switch (opcion)      
-        { 
-        case 1:          // creacion del archivo txt
-        
+        switch (opcion)
+        {
+        case 1: // creacion del archivo txt
+        {
             cout << "\n=== Puntuaciones ===\n";
             ofstream Puntuacionarchivo;
             Puntuacionarchivo.open("Puntuaciones.txt", ios::out);
-            if (Puntuacionarchivo.fail())      // verificando posible error de apertura
+            if (Puntuacionarchivo.fail()) // verificando posible error de apertura
             {
 
                 cout << "No se pudo abrir el archivo puntuacion. ";
                 exit(1);
             }
-             for (const auto &p : Participantes)      // recorre cada participante del contenedor participantes
+            for (const auto &p : Participantes) // recorre cada participante del contenedor participantes
             {
                 // para cada participante se imprime su nombre y puntuacion
-                cout << p.Name << " - Puntuacion: " << p.SCORE << "\n"; 
+                cout << p.Name << " - Puntuacion: " << p.SCORE << "\n";
 
-                // se guarda en el archivo .txt     
-                Puntuacionarchivo << p.Name << " - Puntuacion: " << p.SCORE << "\n";   
+                // se guarda en el archivo .txt
+                Puntuacionarchivo << p.Name << " - Puntuacion: " << p.SCORE << "\n";
             }
-            Puntuacionarchivo.close();      // se cierra el archivo .txt
+            Puntuacionarchivo.close(); // se cierra el archivo .txt
 
             // declara un objeto de tipo ofstream
             ofstream Partidas;
@@ -55,40 +56,40 @@ int main() {
                 cout << "No se pudo abrir el archivo puntuacion. ";
                 exit(1);
             }
-             for (const auto &p : Participantes)
+            for (const auto &p : Participantes)
             {
-                cout << p.Name << " Vs " << p.Name << "\n";      // imprime el nombre de los jugadores
-                Partidas << p.Name << " Vs " << "maquina" << "\n";      
+                cout << p.Name << " Vs " << p.Name << "\n"; // imprime el nombre de los jugadores
+                Partidas << p.Name << " Vs " << "maquina" << "\n";
             }
             Partidas.close();
-            
+
             // imprime las partidas guardadas
-            cout << "\n====> Partidas guardadas <====\n";      
+            cout << "\n====> Partidas guardadas <====\n";
             for (const auto &juego : JUEGOS)
             {
                 cout << juego << "\n";
             }
-
             break;
+        }
 
         case 2:
-        
-            int modJuego;  
-                            //Opcion que pregunta modo de juego     
+        {
+            int modJuego;
+            // Opcion que pregunta modo de juego
             cout << "Elige el modo que deseas jugar '(|1|) Jugador vs Jugador' |/| '(|2|). Jugador vs la maquina': ";
-            cin >> modJuego; 
+            cin >> modJuego;
             bool VSmaquina = (modJuego == 2);
 
-            if (VSmaquina)   // Agregando opcion Vs maquina 
+            if (VSmaquina) // Agregando opcion Vs maquina
             {
                 cout << "\nIngrese el nombre del participante: ";
                 cin >> Usuario_1;
                 cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
                 Usuario_2 = "Maquina";
             }
-            else    //Opcion Jugador vs Jugador 
+            else // Opcion Jugador vs Jugador
             {
-                //Solicitando los nombres de los jugadores
+                // Solicitando los nombres de los jugadores
                 cout << "\nIngrese el nombre del primer participante: ";
                 cin >> Usuario_1;
                 cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
@@ -97,11 +98,15 @@ int main() {
                 cout << "El participante " << Usuario_1 << " A sido inscrito.\n"
                      << "\n";
             }
-
-            break;
+            // Devuelve partidas jugadas
+            RESULT = JUGAR(Usuario_1, Usuario_2, Participantes, VSmaquina);
+            string JUEGOdesc = (VSmaquina) ? (Usuario_1 + " vs Maquina") : (Usuario_1 + " vs " + Usuario_2);
+            JUEGOS.push_back(JUEGOdesc);
+            char SEGUIR;
         }
+        break;
+        }
+        }while (opcion != 6);
 
-    }while (opcion != 6);
-     
     return 0;
 }

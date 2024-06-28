@@ -72,7 +72,7 @@ void MovimientoMaquina(char Tablero[][3])
 pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participant> &Participantes, bool VSmaquina)  
 {
     char Tablero[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};           //Pair contendra tanto como vector y bool
-    char TURNO = 'X';
-    string GANADOR = "";
+    char TURNO = 'X';               //Declaramos 3 variables
+    string GANADOR = "";   
     string PERDEDOR = "";
 }

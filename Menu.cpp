@@ -137,6 +137,13 @@ int main()
                 cout << "El ganador es: " << RESULT.first << "\n";
                 cout << "El segundo jugador es: " << RESULT.second << "\n";
             }
+            //Crea archivo txt(Resultado) mostrando los resultados
+            ofstream resultarchivo("\n" <<"Resultado.txt");  
+            if (RESULT.first == "Empate")
+            {
+                //Guarda empate
+                resultarchivo << "La partida termino en empate." << "\n";
+            }
         break;
         } 
 

@@ -57,8 +57,8 @@ bool VerifiGANADOR(char Tablero[][3], char Jugador) {
 
 void MovimientoMaquina(char Tablero[][3])
 {
-    srand(time(0));
-    int Fila, Columna;               
+    srand(time(0));                       //Tiempo que toma la maquina al ingresar un dato al momento de jugar 
+    int Fila, Columna;                    //El dato segun el tiempo(segundos) cambiando de posisiones aleatorias cada vez quen el programa se ejecute 
     do
     {
         Fila = rand() % 3;                     //Adentro del "do" esto se trabaja en matrices o estructura datos que tiene un tamaño fijo 
@@ -67,3 +67,12 @@ void MovimientoMaquina(char Tablero[][3])
     Tablero[Fila][Columna] = 'O';
 }
 
+//Realiza la selección de ganador y perdedor 
+
+pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participant> &Participantes, bool VSmaquina)
+{
+    char Tablero[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+    char TURNO = 'X';
+    string GANADOR = "";
+    string PERDEDOR = "";
+}

@@ -128,9 +128,13 @@ int main()
             {
                 cout << "Aun no hay un ganador o no se ha jugado la partida.\n";
             }
+            else if (RESULT.first == "Empate")   //Si hay empate imprimir esto:  
+            {
+                cout << "\nLa partida termino en empate.\n";
+            }
         break;
         } 
-        
+
         }
         
     }while (opcion != 6);

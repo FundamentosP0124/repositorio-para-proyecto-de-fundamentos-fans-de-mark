@@ -89,7 +89,10 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
             cout << "Ingrese la fila (1-3) y la columna (1-3): ";
             cin >> Fila >> Columna;
 
+            //Las Fila-- y Columna-- reducen el valor de Fila y Columna en 1, respectivamente. Este tipo de operaciones es común en bucles 
 
+            Fila--;
+            Columna--;
         }
 
 

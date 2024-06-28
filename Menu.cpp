@@ -21,7 +21,7 @@ int main() {
         cin >> opcion;
 
         switch (opcion)      
-        {
+        { 
         case 1:          // creacion del archivo txt
         
             cout << "\n=== Puntuaciones ===\n";
@@ -71,9 +71,17 @@ int main() {
 
             break;
 
+        case 2:
+        
+            int modJuego; //Opcion que pregunta modo de juego 
+            cout << "Elige el modo que deseas jugar '(|1|) Jugador vs Jugador' |/| '(|2|). Jugador vs la maquina': ";
+            cin >> modJuego;
+            bool VSmaquina = (modJuego == 2);
+
+            break;
         }
 
-        } while (opcion != 6);
-    
+    }while (opcion != 6);
+     
     return 0;
 }

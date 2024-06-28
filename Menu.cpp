@@ -103,9 +103,27 @@ int main()
             string JUEGOdesc = (VSmaquina) ? (Usuario_1 + " vs Maquina") : (Usuario_1 + " vs " + Usuario_2);
             JUEGOS.push_back(JUEGOdesc);
             char SEGUIR;
+
+            char SEGUIR;   
+            do
+            {   //Opcion seguir jugando
+                cout << " Desea seguir jugando ====> Seguir jugando= (a) <=||=> Reiniciar el juego(b): ";
+                cin >> SEGUIR;
+                if (SEGUIR == 'n' || SEGUIR == 'N')
+                {
+                    Usuario_1 = "";
+                    Usuario_2 = "";
+                    Participantes.clear();
+                    JUEGOS.clear();
+                    cout << "| El juego se ha reiniciado |.\n";
+                }
+
+            } while (SEGUIR != 'A' && SEGUIR != 'B' && SEGUIR != 'a' && SEGUIR != 'b');
         }
         break;
+        
         }
+
         }while (opcion != 6);
 
     return 0;

@@ -61,8 +61,9 @@ void MovimientoMaquina(char Tablero[][3])
     int Fila, Columna;               
     do
     {
-        Fila = rand() % 3;
-        Columna = rand() % 3;
+        Fila = rand() % 3;                     //Adentro del "do" esto se trabaja en matrices o estructura datos que tiene un tamaño fijo 
+        Columna = rand() % 3;                  //Generando un rango aleatorio entre 0 y 2
     } while (Tablero[Fila][Columna] != ' ');
     Tablero[Fila][Columna] = 'O';
 }
+

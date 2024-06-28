@@ -132,6 +132,11 @@ int main()
             {
                 cout << "\nLa partida termino en empate.\n";
             }
+            else    //Imprime los ganadores
+            {
+                cout << "El ganador es: " << RESULT.first << "\n";
+                cout << "El segundo jugador es: " << RESULT.second << "\n";
+            }
         break;
         } 
 

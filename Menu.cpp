@@ -121,6 +121,17 @@ int main()
             } while (SEGUIR != 'A' && SEGUIR != 'B' && SEGUIR != 'a' && SEGUIR != 'b');
         }
         break;
+
+        case 3:
+        { 
+            if (RESULT.first.empty())  //Si no hay datos imprimir esto:   
+            {
+                cout << "Aun no hay un ganador o no se ha jugado la partida.\n";
+            }
+        break;
+        } 
+        
+        }
         
     }while (opcion != 6);
 

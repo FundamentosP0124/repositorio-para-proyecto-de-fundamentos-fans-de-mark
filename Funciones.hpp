@@ -1,5 +1,5 @@
 #include <iostream>  //Es para la entrada y salida estandar
-#include <vector>  // Se utiliza para el contenedor del vector
+#include <vector>  // Se utiliza para almacenar datos que ingresamos dentro del vector pero se necesita la libreria iostream
 #include <string>  //Para manejar cadenas de texto 
 #include <cstdlib> // Sirve para funciones generales de la maquina tales como rand() y srand() posiciones aleatorias
 #include <ctime>   //Nos ayuda para obtener el tiempo actual
@@ -53,3 +53,16 @@ bool VerifiGANADOR(char Tablero[][3], char Jugador) {
     return false;
 }
 
+//Movimientos que realiza la maquina en el tablero al momento de jugar contra el jugador
+
+void MovimientoMaquina(char Tablero[][3])
+{
+    srand(time(0));
+    int Fila, Columna;               
+    do
+    {
+        Fila = rand() % 3;
+        Columna = rand() % 3;
+    } while (Tablero[Fila][Columna] != ' ');
+    Tablero[Fila][Columna] = 'O';
+}

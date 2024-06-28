@@ -61,6 +61,13 @@ int main() {
                 Partidas << p.Name << " Vs " << "maquina" << "\n";      
             }
             Partidas.close();
+            
+            // imprime las partidas guardadas
+            cout << "\n====> Partidas guardadas <====\n";      
+            for (const auto &juego : JUEGOS)
+            {
+                cout << juego << "\n";
+            }
 
             break;
 

@@ -82,7 +82,31 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
         int Fila, Columna;               //Declaración de las variables que van impresión del tablero
         ImpriTablero(Tablero);
 
+        
+        if (TURNO == 'X' || !VSmaquina)    //Los turnos que tendran los jugadores tanto como la maquina al ingresar sus posiciónes
+        {
+            cout << "El Turno de " << (TURNO == 'X' ? Usuario_1 : Usuario_2) << " (" << TURNO << "):\n";
+            cout << "Ingrese la fila (1-3) y la columna (1-3): ";
+            cin >> Fila >> Columna;
+
+            //Las Fila-- y Columna-- reducen el valor de Fila y Columna en 1, respectivamente. Este tipo de operaciones es común en bucles 
+
+            Fila--;
+            Columna--;
+            
+            //Verifica si las posiciones en el tablero es diferente de un blanco
+
+            if (Tablero[Fila][Columna] != ' ')
+            {
+                cout << " |=|Posicion ocupada o Invalida.|=|\n";
+                continue;
+            }
+            Tablero[Fila][Columna] = TURNO;
+        }
+
+
     }
+
 }
 
 

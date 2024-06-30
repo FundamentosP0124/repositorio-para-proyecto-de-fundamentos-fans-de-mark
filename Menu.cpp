@@ -154,7 +154,7 @@ int main()
         break;
         } 
         
-             case 4:      // mostrar las indicaciones del juego
+        case 4:      // mostrar las indicaciones del juego
             cout << "\n                             === Ayuda ===\n"
                  << "\n";
             cout << "Este es un juego de X ^ O.\n";
@@ -166,7 +166,7 @@ int main()
             break;
             
 
-             case 5:      // imprime los nombres y los carnets de los integrantes del proyecto
+        case 5:      // imprime los nombres y los carnets de los integrantes del proyecto
             {
             cout << "\n            === Integrantes del Proyecto ===\n";
             cout << "1. Josue Alejandro Bran Bonilla     - Carnet => 00224824\n";
@@ -176,8 +176,12 @@ int main()
             }
             
             
-            case 6:      // imprime un mensaje indicando que el juego ha terminado
+        case 6:      // imprime un mensaje indicando que el juego ha terminado
             cout << "Fin del Juego, Saliendo del programa...\n";
+            break;
+
+        default:     //Defaut, por si el valor ingresado es invalido
+            cout << "\nLa opcion ingresada es invalida, ingresa una opcion valida";
             break;
         }
         

@@ -107,7 +107,7 @@ int main()
             char SEGUIR;
             do
             { // Opcion seguir jugando
-                cout << " Desea seguir jugando ====> Seguir jugando= (a) <=||=> Reiniciar el juego(b): ";
+                cout << " Desea seguir jugando ====> Seguir jugando= (a) <=== ===> Reiniciar el juego(b): ";
                 cin >> SEGUIR;
                 if (SEGUIR == 'n' || SEGUIR == 'N')
                 {
@@ -138,7 +138,7 @@ int main()
                 cout << "El segundo jugador es: " << RESULT.second << "\n";
             }
             //Crea archivo txt(Resultado) mostrando los resultados
-            ofstream resultarchivo("\n" <<"Resultado.txt");  
+            ofstream resultarchivo("\nResultado.txt");  
             if (RESULT.first == "Empate")
             {
                 //Guarda empate
@@ -153,6 +153,9 @@ int main()
         break;
         } 
 
+        //Caso 4 
+
+        
         }
         
     }while (opcion != 6);

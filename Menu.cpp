@@ -174,6 +174,12 @@ int main()
             break;   
             }
 
+            case 6:      // imprime un mensaje indicando que el juego ha terminado
+            cout << "Fin del Juego, Saliendo del programa...\n";
+            break;
+        
+
+
         }
         
     }while (opcion != 6);

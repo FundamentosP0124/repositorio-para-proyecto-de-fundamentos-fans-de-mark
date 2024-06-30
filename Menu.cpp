@@ -69,6 +69,7 @@ int main()
             {
                 cout << juego << "\n";
             }
+
             break;
         }
 
@@ -152,6 +153,17 @@ int main()
             resultarchivo.close();
         break;
         } 
+        
+             case 4:      // mostrar las indicaciones del juego
+            cout << "\n                             === Ayuda ===\n"
+                 << "\n";
+            cout << "Este es un juego de X ^ O.\n";
+            cout << "1. Inscriba a dos participantes.\n";
+            cout << "2. Seleccione 'Jugar' para comenzar una partida.\n";
+            cout << "3. Cada jugador ingresa las coordenadas (Fila y Columna) Fila: De forma horizontal, Columna: De forma vertical para colocar su simbolo.\n";
+            cout << "4. El primer jugador en alinear tres simbolos (Sean 'X' o 'O') en fila, columna o diagonal gana.\n";
+            cout << "5. Si el tablero se llena sin que nadie gane, es un empate.\n";
+            break;
 
         //Caso 4 
 

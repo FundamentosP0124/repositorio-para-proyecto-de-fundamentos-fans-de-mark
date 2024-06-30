@@ -164,19 +164,21 @@ int main()
             cout << "4. El primer jugador en alinear tres simbolos (Sean 'X' o 'O') en fila, columna o diagonal gana.\n";
             cout << "5. Si el tablero se llena sin que nadie gane, es un empate.\n";
             break;
-            {
+            
 
              case 5:      // imprime los nombres y los carnets de los integrantes del proyecto
+            {
             cout << "\n            === Integrantes del Proyecto ===\n";
             cout << "1. Josue Alejandro Bran Bonilla     - Carnet => 00224824\n";
             cout << "2. Leonel Alexander Canas Rodriguez - Carnet => 00145424\n";
             cout << "3. Moises Alessandro Mencos Andrade - Carnet => 00146324\n";
-            break;   
+            break; 
             }
-
-        //Caso 4 
-
-        
+            
+            
+            case 6:      // imprime un mensaje indicando que el juego ha terminado
+            cout << "Fin del Juego, Saliendo del programa...\n";
+            break;
         }
         
     }while (opcion != 6);

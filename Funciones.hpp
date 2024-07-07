@@ -109,6 +109,14 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
             cout << "La maquina ha hecho su movimiento.\n";
         }                             //Es para verificar el ganador o perdedor al momento de terminar una partida 
 
+        if (VerifiGANADOR(Tablero, TURNO))
+        {
+            ImpriTablero(Tablero);
+            GANADOR = (TURNO == 'X' ? Usuario_1 : Usuario_2);
+            PERDEDOR = (TURNO == 'X' ? Usuario_2 : Usuario_1);
+            cout << "<||>'El jugador " << GANADOR << " (" << TURNO << ") ha ganado'<||>\n";
+
+        }    
 
 
     }while(true);

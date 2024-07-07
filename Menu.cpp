@@ -155,14 +155,29 @@ int main()
         } 
         
         case 4:      // mostrar las indicaciones del juego
-            cout << "\n                             === Ayuda ===\n"
-                 << "\n";
-            cout << "Este es un juego de X ^ O.\n";
-            cout << "1. Inscriba a dos participantes.\n";
-            cout << "2. Seleccione 'Jugar' para comenzar una partida.\n";
-            cout << "3. Cada jugador ingresa las coordenadas (Fila y Columna) Fila: De forma horizontal, Columna: De forma vertical para colocar su simbolo.\n";
-            cout << "4. El primer jugador en alinear tres simbolos (Sean 'X' o 'O') en fila, columna o diagonal gana.\n";
-            cout << "5. Si el tablero se llena sin que nadie gane, es un empate.\n";
+            do
+            {
+                cout << "\n \t \t \t \t <=== AYUDA ===>\n";
+                cout << "\t \t \t<===Este es un juego de X ^ O===>\n \n";
+                cout << "1. Inscriba a dos participantes.\n";
+                cout << "2. Seleccione 'Jugar' para comenzar una partida.\n";
+                cout << "3. Cada jugador ingresa las coordenadas (Fila y Columna) Fila: De forma horizontal, Columna: De forma vertical para colocar su simbolo.\n";
+                cout << "4. El primer jugador en alinear tres simbolos (Sean 'X' o 'O') en fila, columna o diagonal gana.\n";
+                cout << "5. Si el tablero se llena sin que nadie gane, es un empate.\n";
+                cout << "\n<===Si has entendido y estas listo para jugar ingresa el Numero 1: ===> ";
+                cin >> numAyuda;
+
+                //Verifica si la entrada no es valida
+                if (cin.fail() || numAyuda != 1)
+                {
+                    cin.clear(); //Limpia el estado de error, to use cin again
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n'); //Ignora el resto de la linea en el flujo de entrada
+                    cout << "\n<====ENTRADA NO VALIDA. Por favor ingrese un valor valido====> \n";
+                }
+                
+                
+            } while (numAyuda != 1 || cin.fail());
+            
             break;
             
 

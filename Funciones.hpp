@@ -94,7 +94,7 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
             Fila--;
             Columna--;
             
-            //Verifica si las posiciones en el tablero es diferente de un blanco
+            //Verifica si las posiciones en el tablero si es diferente de un espacio en blanco
 
             if (Tablero[Fila][Columna] != ' ')
             {
@@ -103,9 +103,18 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
             }
             Tablero[Fila][Columna] = TURNO;
         }
+        else                            //Es cuando el jugador haga el su movimiento sera el turno de la maquina en el tablero
+        {
+            MovimientoMaquina(Tablero);
+            cout << "La maquina ha hecho su movimiento.\n";
+        }                             //Es para verificar el ganador o perdedor al momento de terminar una partida 
 
 
-    }
+
+    }while(true);
+
+    cout << "'Gracias por jugar'\n";
+    return {GANADOR, PERDEDOR};
 
 }
 

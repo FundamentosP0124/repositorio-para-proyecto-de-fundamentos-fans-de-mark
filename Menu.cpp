@@ -77,7 +77,7 @@ int main()
         {
             int modJuego;
             // Opcion que pregunta modo de juego
-            cout << "Elige el modo que deseas jugar '(|1|) Jugador vs Jugador' |/| '(|2|). Jugador vs la maquina': ";
+            cout << "Para jugar Jugador vs Jugador ingresa ==> 1, Para jugar Jugador vs Maquina, ingresa ==> 2";
             cin >> modJuego;
             bool VSmaquina = (modJuego == 2);
 

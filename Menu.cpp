@@ -85,7 +85,7 @@ int main()
             {
                 cout << "\nIngrese el nombre del participante: ";
                 cin >> Usuario_1;
-                cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
+                cout << "El participante " << Usuario_1 << " ha sido inscrito.\n";
                 Usuario_2 = "Maquina";
             }
             else // Opcion Jugador vs Jugador
@@ -93,11 +93,10 @@ int main()
                 // Solicitando los nombres de los jugadores
                 cout << "\nIngrese el nombre del primer participante: ";
                 cin >> Usuario_1;
-                cout << "El participante " << Usuario_1 << " A sido inscrito.\n";
+                cout << "El participante " << Usuario_1 << " ha sido inscrito.\n";
                 cout << "\nIngrese el nombre del segundo participante: ";
                 cin >> Usuario_2;
-                cout << "El participante " << Usuario_1 << " A sido inscrito.\n"
-                     << "\n";
+                cout << "El participante " << Usuario_2 << " ha sido inscrito.\n"<< "\n";
             }
             // Devuelve partidas jugadas
             RESULT = JUGAR(Usuario_1, Usuario_2, Participantes, VSmaquina);

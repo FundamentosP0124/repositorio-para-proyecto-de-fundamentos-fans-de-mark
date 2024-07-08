@@ -105,7 +105,6 @@ int main()
             JUEGOS.push_back(JUEGOdesc);
             char SEGUIR;
 
-            char SEGUIR;
             do
             { // Opcion seguir jugando
                 cout << " Desea seguir jugando ====> Seguir jugando= (a) <=== ===> Reiniciar el juego(b): ";
@@ -170,7 +169,7 @@ int main()
                 //Verifica si la entrada no es valida
                 if (cin.fail() || numAyuda != 1)
                 {
-                    cin.clear(); //Limpia el estado de error, to use cin again
+                    cin.clear(); //Limpia el estado de error, para usar cin de nuevo
                     cin.ignore(numeric_limits<streamsize>::max(), '\n'); //Ignora el resto de la linea en el flujo de entrada
                     cout << "\n<====ENTRADA NO VALIDA. Por favor ingrese un valor valido====> \n";
                 }

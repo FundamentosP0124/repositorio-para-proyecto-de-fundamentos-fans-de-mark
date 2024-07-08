@@ -4,6 +4,7 @@
 #include <cstdlib> // Sirve para funciones generales de la maquina tales como rand() y srand() posiciones aleatorias
 #include <ctime>   //Nos ayuda para obtener el tiempo actual
 #include <fstream> //Nos sirive para manejar archivo.txt
+#include <limits> //Para numeric_limits
 using namespace std; 
 //Declaración de la función
 struct Participant { 

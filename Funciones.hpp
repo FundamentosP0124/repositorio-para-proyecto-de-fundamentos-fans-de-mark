@@ -103,7 +103,7 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
 
             if (Tablero[Fila][Columna] != ' ')
             {
-                cout << " |=|Posicion ocupada o Invalida.|=|\n";
+                cout << " <===Posicion ocupada o Invalida.===>\n";
                 continue;
             }
             Tablero[Fila][Columna] = TURNO;
@@ -119,7 +119,7 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
             ImpriTablero(Tablero);
             GANADOR = (TURNO == 'X' ? Usuario_1 : Usuario_2);
             PERDEDOR = (TURNO == 'X' ? Usuario_2 : Usuario_1);
-            cout << "<||>'El jugador " << GANADOR << " (" << TURNO << ") ha ganado'<||>\n";
+            cout << "<==='El jugador " << GANADOR << " (" << TURNO << ") ha ganado'===>\n";
 
             //Busca un ganador en la lista de participantes y incrementa su puntaje al que representa ganador y al perdedor
 

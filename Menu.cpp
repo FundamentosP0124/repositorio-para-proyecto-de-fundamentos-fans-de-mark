@@ -1,4 +1,4 @@
-#include <Funciones.hpp>
+#include "Funciones.hpp"
 
 int main()
 {
@@ -119,9 +119,9 @@ int main()
                 }
 
             } while (SEGUIR != 'A' && SEGUIR != 'B' && SEGUIR != 'a' && SEGUIR != 'b');
-        
-        break;
         }
+        break;
+        
         
         case 3:
         { 
@@ -151,11 +151,11 @@ int main()
                 resultarchivo << "El segundo jugador es: " << RESULT.second << "\n";
             }
             resultarchivo.close();
-        break;
+            break;
         } 
         
         case 4:      // mostrar las indicaciones del juego
-        { 
+        
             do
             {
                 cout << "\n \t \t \t \t <=== AYUDA ===>\n";
@@ -180,30 +180,23 @@ int main()
             } while (numAyuda != 1 || cin.fail());
 
             break;
-            
-        }
 
         case 5:      // imprime los nombres y los carnets de los integrantes del proyecto
-        {
             cout << "\n            === Integrantes del Proyecto ===\n";
             cout << "1. Josue Alejandro Bran Bonilla     - Carnet => 00224824\n";
             cout << "2. Leonel Alexander Canas Rodriguez - Carnet => 00145424\n";
             cout << "3. Moises Alessandro Mencos Andrade - Carnet => 00146324\n";
             break; 
-        }
+        
             
             
         case 6:      // imprime un mensaje indicando que el juego ha terminado
-        { 
             cout << "Fin del Juego, Saliendo del programa...\n";
             break;
-        }    
 
         default:     //Defaut, por si el valor ingresado es invalido
-        { 
             cout << "\nLa opcion ingresada es invalida, ingresa una opcion valida";
             break;
-        }
 
         }
         

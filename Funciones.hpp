@@ -3,7 +3,7 @@
 #include <string>  //Para manejar cadenas de texto 
 #include <cstdlib> // Sirve para funciones generales de la maquina tales como rand() y srand() posiciones aleatorias
 #include <ctime>   //Nos ayuda para obtener el tiempo actual
-#include <fstream> //Nos sirive para manejar archivo.txt
+#include <fstream> //Nos sirve para manejar archivo.txt
 #include <limits> //Para numeric_limits
 using namespace std; 
 //Declaración de la función
@@ -12,7 +12,8 @@ struct Participant {
     int SCORE;
 };
 
-bool Tableroempate(char Tablero[][3]){   //Es para verificar si hay un empate sea de jugador vs jugador o Vsmaquina
+bool Tableroempate(char Tablero[][3])  //Es para verificar si hay un empate sea de jugador vs jugador o Vsmaquina
+{   
 
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
@@ -29,7 +30,8 @@ bool Tableroempate(char Tablero[][3]){   //Es para verificar si hay un empate se
 void ImpriTablero(char Tablero[][3]) 
 {   cout << "-------------\n";                      //Modificación del 'Tablero'
     for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; ++j) {
+        for (int j = 0; j < 3; ++j)
+        {
             cout << "| " << Tablero[i][j] << " ";
         }
         cout << "|\n";
@@ -39,8 +41,10 @@ void ImpriTablero(char Tablero[][3])
 
 // Verifica el ganador en diferentes posiciones del tablero sea diagonal, horizontal o vertical
 
-bool VerifiGANADOR(char Tablero[][3], char Jugador) {
-    for (int i = 0; i < 3; ++i) {
+bool VerifiGANADOR(char Tablero[][3], char Jugador) 
+{
+    for (int i = 0; i < 3; ++i) 
+    {
         if (Tablero[i][0] == Jugador && Tablero[i][1] == Jugador && Tablero[i][2] == Jugador)
             return true;
         if (Tablero[0][i] == Jugador && Tablero[1][i] == Jugador && Tablero[2][i] == Jugador)
@@ -142,8 +146,6 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
             return {"Empate", "Empate"};
         }
    
-
-
     }while(true);
 
     cout << "'Gracias por jugar'\n";

@@ -142,7 +142,7 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
         if (Tableroempate(Tablero))
         {
             ImpriTablero(Tablero);
-            cout << "<||>\n 'El juego a terminado en empate' <||>\n";
+            cout << "\n<=== 'El juego ha terminado en empate' ===>\n";
             return {"Empate", "Empate"};
         }
    

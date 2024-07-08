@@ -126,9 +126,22 @@ pair<string, string> JUGAR(string Usuario_1, string Usuario_2, vector<Participan
                     p.SCORE++;
                     return {GANADOR, PERDEDOR};
                 }
-            }
+            }                                      //En este código agrega el par que es Ganador 1 al vector Participante
+            Participantes.push_back({GANADOR, 1}); //y luego lo imprime los participantes
+            break;
 
-        }    
+        } 
+           //Altenar el valor del turno entre 'X' Y 'O'
+        TURNO = (TURNO == 'X' ? 'O' : 'X');
+
+        // Función si hay empate en el juego
+        if (Tableroempate(Tablero))
+        {
+            ImpriTablero(Tablero);
+            cout << "<||>\n 'El juego a terminado en empate' <||>\n";
+            return {"Empate", "Empate"};
+        }
+   
 
 
     }while(true);

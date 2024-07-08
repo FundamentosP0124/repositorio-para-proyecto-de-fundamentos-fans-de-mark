@@ -119,9 +119,10 @@ int main()
                 }
 
             } while (SEGUIR != 'A' && SEGUIR != 'B' && SEGUIR != 'a' && SEGUIR != 'b');
-        }
+        
         break;
-
+        }
+        
         case 3:
         { 
             if (RESULT.first.empty())  //Si no hay datos imprimir esto:   
@@ -154,6 +155,7 @@ int main()
         } 
         
         case 4:      // mostrar las indicaciones del juego
+        { 
             do
             {
                 cout << "\n \t \t \t \t <=== AYUDA ===>\n";
@@ -179,24 +181,30 @@ int main()
 
             break;
             
+        }
 
         case 5:      // imprime los nombres y los carnets de los integrantes del proyecto
-            {
+        {
             cout << "\n            === Integrantes del Proyecto ===\n";
             cout << "1. Josue Alejandro Bran Bonilla     - Carnet => 00224824\n";
             cout << "2. Leonel Alexander Canas Rodriguez - Carnet => 00145424\n";
             cout << "3. Moises Alessandro Mencos Andrade - Carnet => 00146324\n";
             break; 
-            }
+        }
             
             
         case 6:      // imprime un mensaje indicando que el juego ha terminado
+        { 
             cout << "Fin del Juego, Saliendo del programa...\n";
             break;
+        }    
 
         default:     //Defaut, por si el valor ingresado es invalido
+        { 
             cout << "\nLa opcion ingresada es invalida, ingresa una opcion valida";
             break;
+        }
+
         }
         
     }while (opcion != 6);

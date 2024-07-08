@@ -10,7 +10,7 @@ int main()
 
     do // opciones del menu
     {
-        cout << "\n                    <====JUEGO X ^ O====>\n";
+        cout << "\n                    <====JUEGO X f^ O====>\n";
         cout << "\n       ====OPCIONES DEL JUEGO====\n\n";
         cout << "1. Listas de Puntuaciones de 'jugadores' en archivo.txt\n";
         cout << "2. Jugar\n";
@@ -77,7 +77,7 @@ int main()
         {
             int modJuego;
             // Opcion que pregunta modo de juego
-            cout << "Para jugar Jugador vs Jugador ingresa ==> 1, Para jugar Jugador vs Maquina, ingresa ==> 2";
+            cout << "Para jugar Jugador vs Jugador ingresa ==> 1, Para jugar Jugador vs Maquina, ingresa ==> 2: ";
             cin >> modJuego;
             bool VSmaquina = (modJuego == 2);
 
